@@ -9,7 +9,7 @@
 const nodemailer = require("nodemailer");
 const fs = require("./fs-async");
 const path = require("path");
-const htmlparser, { TextNode } = require("node-html-parser");
+const htmlparser = require("node-html-parser");
 const JobError = require("./JobError");
 const DEBUG = getEnv("DEBUG", false);
 
