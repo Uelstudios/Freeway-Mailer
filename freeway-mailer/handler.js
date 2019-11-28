@@ -45,7 +45,12 @@ module.exports = async (event, context) => {
  */
 async function doJob(body) {
     const { initiator, mail } = body;
-    const mailToSend = { from, to, subject, text, html };
+
+    if (!initiator)
+        throw new Error("Field 'initiator' not set.")
+    if (!mail)
+        throw new Error("Field 'mail' not set.")
+
 
     // From
     if (mail.from) {
