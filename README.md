@@ -55,8 +55,8 @@ For testing the function run it with the DEBUG=true and MAIL_SECURE=false. A fre
 ## Response
 ```
 {
-    accepted: <number>,         // Number of sent emails
-    rejected: <number>,         // Number of emails that were supposed to be sent
+    accepted: <number>,         // Number of accepted emails
+    rejected: <number>,         // Number of rejected emails
     previewUrl: <number>        // Link to view email on Ethereal.email (only returned if env DEBUG is true)
 }
 ```
