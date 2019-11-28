@@ -90,7 +90,7 @@ async function doJob(body) {
 
     let transporter;
     if (DEBUG) {
-        transporter = getTestingTransport();
+        transporter = await getTestingTransport();
     } else {
         transporter = getTransport()
     }
@@ -113,7 +113,7 @@ async function doJob(body) {
 /**
  * This function returns a SMTP transport from ethereal for testing.
  */
-function getTestingTransport() {
+async function getTestingTransport() {
     // Generate test SMTP service account from ethereal.email
     const testAccount = await nodemailer.createTestAccount();
 
