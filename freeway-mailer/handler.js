@@ -204,7 +204,7 @@ async function getTemplate(key, values) {
  * @throws {JobError} If sending emails fails
  */
 function sendEmail(transporter, mail) {
-    return transporter.sendMail(mailToSend)
+    return transporter.sendMail(mail)
         .catch(error => {
             throw new JobError("Sending emails failed.", JobError.REASON_SERVER, error);
         })
