@@ -11,6 +11,8 @@ const fs = require("./fs-async");
 const path = require("path");
 const htmlparser = require("node-html-parser");
 const JobError = require("./JobError");
+const os = require('os');
+
 const DEBUG = getEnv("DEBUG", false);
 
 // Environment variables
