@@ -5,7 +5,8 @@
  */
 class JobError extends Error {
     constructor(message, reason, originalError) {
-        this.message = message;
+        super(message);
+
         this.reason = reason;
         this.originalError = originalError;
     }
