@@ -170,8 +170,7 @@ function getTransport() {
 async function getTemplate(key, values) {
     // Find template
     const fileName = key + ".html";
-    const templates = await fs.readDir("./templates");
-    if (!templates[fileName]) throw new JobError(`Template '${key}' does not exist.`);
+    if (!templates.includes(fileName)) throw new JobError(`Template '${key}' does not exist.`);
 
     // Read file & parse html
     const templatePath = path.join("./template", fileName);
