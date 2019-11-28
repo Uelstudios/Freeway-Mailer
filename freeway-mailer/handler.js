@@ -51,6 +51,7 @@ async function doJob(body) {
     if (!mail)
         throw new Error("Field 'mail' not set.")
 
+    const mailToSend = Object.create(null);
 
     // From
     if (mail.from) {
